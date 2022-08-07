@@ -1,6 +1,6 @@
 const importLibs = [
-    'node_modules/@fancyapps/ui/dist/fancybox.css',
-    'node_modules/swiper/swiper-bundle.css'
+    // 'node_modules/@fancyapps/ui/dist/fancybox.css',
+    // 'node_modules/swiper/swiper-bundle.css'
 ]
 
 const { src, dest, watch, series, parallel } = require('gulp'),
@@ -32,8 +32,8 @@ const styles = () => {
     return src([
             // appendFontMixin(),
             './src/scss/base/main.{scss, saas}',
-            './src/scss/**.{scss, sass, css}',
             './src/scss/blocks/**.{scss, sass, css}',
+            './src/scss/**.{scss, sass, css}',
             ...importLibs
         ])
 

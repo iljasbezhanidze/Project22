@@ -1,14 +1,16 @@
 //variables
-$maxWidth: 1920;
-
-$light-bcg: #7EC1F9;
-$dark-bcg: #0D4C82;
-$grey-bcg: #fafafa;
-$text-color: #212121;
+$light-blue: #7EC1F9;
+$dark-blue: #0D4C82;
+$grey: #fafafa;
+$black: #212121;
+$white: #fff;
 
 $colors: (
-    'primary': $primary,
-    'secondary': $secondary,
+    'light-blue' : $light-blue,
+    'dark-blue' : $dark-blue,
+    'grey' : $grey,
+    'black' : $black,
+    'white' : $white
 );
 
 @each $c_name,
