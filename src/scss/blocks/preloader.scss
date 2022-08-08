@@ -4,7 +4,10 @@
 
 .b-preloader {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
     background-color: $light-blue;
     display: flex;
     justify-content: center;
@@ -12,6 +15,7 @@
     flex-direction: column;
     z-index: 99999;
     @include adaptiv-value('padding', 60, 30, 1);
+    transition: all .5s cubic-bezier(0.9, 0.0, 0.3, 0.5);
 
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         padding: get-vw(60px);
@@ -31,4 +35,9 @@
     margin-top: auto;
     @include adaptive-font(27, 14);
     color: $dark-blue;
+}
+
+.b-preloader.active {
+    top: -100%;
+    bottom: 0;
 }

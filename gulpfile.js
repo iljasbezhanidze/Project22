@@ -133,10 +133,16 @@ const imagesBuild = () => {
         .pipe(dest('./build/img'))
 }
 
+const scriptsBuld = () => {
+    return src('./dist/**.js')
+        .pipe(dest('./build'))
+}
+
 exports.build = series(
     clearBuild,
     htmlBuild,
     stylesBuild,
     fontsBuild,
-    imagesBuild
+    imagesBuild,
+    scriptsBuld
 )
