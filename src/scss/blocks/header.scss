@@ -27,7 +27,7 @@ header {
         width: max(120px, 152px);
         z-index: 2;
 
-        & img {
+        & svg {
             min-width: 100%;
         }
 
@@ -67,7 +67,7 @@ header {
     }
 
     & li {
-        color: $white;
+        // color: $white;
 
         & a {
             font-size: 16px;

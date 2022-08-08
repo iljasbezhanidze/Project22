@@ -1,3 +1,4 @@
+//preloader
 window.addEventListener('DOMContentLoaded', () => {
 
   //preloader

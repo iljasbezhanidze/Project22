@@ -1,6 +1,15 @@
 <header>
     <a class="b-logo" href="index.html">
-        <img src="./img/logo.svg" alt="Logo. Return to home page">
+        @@if(background === 'dark') {
+            @@include('logo.html', {
+                color: 'light'
+            })
+        }
+        @@if(background === 'light') {
+            @@include('logo.html', {
+                color: 'dark'
+            })
+        }
     </a>
 
     <nav>
