@@ -1,31 +1,40 @@
 @import './../base/vars';
 
-
-@media(min-width:790px) {
-}
 .b-burger {
-    position: absolute;
-    top: 20px;
+    top: 28px;
     right: 20px;
     width: 30px;
     height: 16px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
     z-index: 9999;
-    
 }
+
 .b-burger__line {
     z-index: 9999;
     height: 1px;
     width: 30px;
-    color: $white;
-    position: absolute;
-    left: 0;
-    top: 0;
+    background-color: $white;
 }
 
 @media(max-width:790px) {
     .b-burger {
-        display: block;
-   
+        display: flex;
+    }
+
+    .active.b-burger {
+        & .b-burger__line:first-child {
+            transform: rotate(45deg) translate3d(0px, 6px, 0);
+        }
+        
+        & .b-burger__line:nth-child(2) {
+            display: none;
+        }
+        
+        & .b-burger__line:last-child {
+            transform: rotate(-45deg) translate3d(0px, -6px, 0);
+        }
     }
 }
