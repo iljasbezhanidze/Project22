@@ -25,8 +25,9 @@
         padding: get-vw(60px);
     }
 
-    & svg {
+    & img {
         margin-top: auto;
+        // aspect-ratio: 1/1;
         @include adaptiv-value('width', 270, 150, 1);
 
         @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {

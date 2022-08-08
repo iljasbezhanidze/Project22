@@ -1,12 +1,10 @@
 //preloader
 window.addEventListener('DOMContentLoaded', () => {
-
-  //preloader
   setTimeout(() => {
     document.querySelector('.b-preloader').classList.add('active')
   }, 3000);
 })
-//burger menu
+// //burger menu
 const burgerBtn = document.querySelector('.b-burger'),
   burgerMenu = document.querySelector('header nav')
 
