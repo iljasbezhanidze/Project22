@@ -23,3 +23,5 @@ const burgerBtn = document.querySelector('.b-burger'),
         burgerMenu.classList.toggle('active')
       }
       
+
+const preloader = 

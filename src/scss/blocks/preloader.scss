@@ -1,0 +1,34 @@
+@import './../base/vars';
+@import './../base/breakpoints';
+@import './../base/mixins';
+
+.b-preloader {
+    position: fixed;
+    inset: 0;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999;
+    @include adaptiv-value('padding', 60, 30, 1);
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        padding: get-vw(60px);
+    }
+
+    & svg {
+        margin-top: auto;
+        @include adaptiv-value('width', 270, 150, 1);
+
+        @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+            width: get-vw(270px);
+        }
+    }
+}
+
+.b-preloader__text {
+    margin-top: auto;
+    @include adaptive-font(27, 14);
+    color: $dark-blue;
+}
