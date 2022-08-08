@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.b-preloader').classList.add('active')
   }, 3000);
 })
+
 // //burger menu
 const burgerBtn = document.querySelector('.b-burger'),
   burgerMenu = document.querySelector('header nav')
@@ -12,3 +13,10 @@ burgerBtn.onclick = function () {
   this.classList.toggle('active')
   burgerMenu.classList.toggle('active')
 }
+
+//menu punkts hover animate(wrpper overflow)
+document.querySelectorAll('[data-roll-animate]').forEach(el => {
+  el.parentNode.style.overflowY = "hidden"
+});
+
+

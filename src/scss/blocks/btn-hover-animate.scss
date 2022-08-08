@@ -1,0 +1,28 @@
+[data-roll-animate] {
+    position: relative;
+    top: 0;
+    will-change: transform;
+    
+    &:after {
+        content: attr(data-roll-animate);
+        position: absolute;
+        top: 1.2em;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+
+    &:hover {
+        animation: roll-text .2s linear 1 .2s;
+    }
+}
+
+@keyframes roll-text {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1.2em;
+    }
+}
+

@@ -6,7 +6,7 @@ body {
     line-height: 1.5;
     background-color: $grey;
     color: $black;
-           
+
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         font-size: get-vw(16px);
     }
@@ -67,3 +67,4 @@ body {
     @include adaptive-font(59, 30);
     line-height: 1.1;
 }
+
