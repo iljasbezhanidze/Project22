@@ -6,12 +6,12 @@ $arrow-size: 1.15em;
 .b-btn {
     padding: 1.25em 3.34em;
     border-radius: 10em;
-    display: inline-block;
+    display: inline-flex;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
     white-space: nowrap;
-    
+
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         font-size: get-vw(12px);
     }
@@ -65,12 +65,12 @@ $arrow-size: 1.15em;
         &_dark-up:hover:after,
         &_dark:hover:after,
         &_light:hover:after {
-            animation: arrow-top .5s linear 1 .2s;
+            animation: arrow-top .3s linear 1 .2s;
         }
 
         &_light-down:hover:after,
         &_dark-down:hover:after {
-            animation: arrow-down .5s linear 1 .2s;
+            animation: arrow-down .3s linear 1 .1s;
         }
 
         @keyframes arrow-top {
@@ -92,5 +92,36 @@ $arrow-size: 1.15em;
                 background-position: 1.5em -1.5em, 0 0;
             }
         }
+    }
+
+    &__inner {
+        position: relative;
+        top: 0;
+        will-change: top;
+        overflow-y: hidden;
+    }
+
+    &__text {
+        &:after {
+            content: attr(data-roll-animate);
+            position: absolute;
+            top: 1.5em;
+            left: 0;
+            right: 0;
+            display: block;
+        }
+
+        .b-btn:hover & {
+            animation: roll .2s linear 1 .1s;
+        }
+    }
+}
+
+@keyframes roll {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1.5em;
     }
 }
