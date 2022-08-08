@@ -50,11 +50,11 @@ const styles = () => {
 }
 
 const scripts = () => {
-    return src('./src/js/main.js')
+    return src('./src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('./dist/js'))
+        .pipe(dest('./dist'))
         .pipe(browserSync.stream());
 }
 

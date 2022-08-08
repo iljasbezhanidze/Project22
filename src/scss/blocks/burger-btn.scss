@@ -1,0 +1,31 @@
+@import './../base/vars';
+
+
+@media(min-width:790px) {
+}
+.b-burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 16px;
+    display: block;
+    z-index: 9999;
+    
+}
+.b-burger__line {
+    z-index: 9999;
+    height: 1px;
+    width: 30px;
+    color: $white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media(max-width:790px) {
+    .b-burger {
+        display: block;
+   
+    }
+}

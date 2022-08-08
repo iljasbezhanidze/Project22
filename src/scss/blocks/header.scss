@@ -1,0 +1,111 @@
+@import './../base/vars';
+@import './../base/breakpoints';
+@import './../base/mixins';
+
+header {
+    column-gap: 50px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md() {
+        column-gap: 20px;
+    }
+
+    @media(max-width:960px) {
+        padding: 20px;
+    }
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        column-gap: get-vw(50px);
+        padding: get-vw(30px);
+    }
+
+
+    & .b-logo {
+        width: max(120px, 152px);
+
+        & img {
+            min-width: 100%;
+        }
+
+        @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+            width: get-vw(152px) !important;
+        }
+    }
+
+
+    & nav {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        column-gap: 50px;
+
+        @include md() {
+            column-gap: 20px;
+        }
+
+        @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+            column-gap: get-vw(50px);
+        }
+    }
+
+    & ul {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+
+        @include md() {
+            column-gap: 15px;
+        }
+
+        @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+            column-gap: get-vw(25px);
+        }
+    }
+
+    & li {
+        color: $white;
+
+        & a {
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+
+            @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+                font-size: get-vw(16px);
+            }
+        }
+    }
+}
+
+.b-burger {
+    display: none;
+}
+
+@media(max-width:790px) {
+    .b-burger {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    header {
+        position: relative;
+
+        & nav {
+            background-color: $dark-blue;
+            position: absolute;
+            inset: 0;
+            flex-direction: column;
+            row-gap: 20px;
+
+            & ul {
+                row-gap: 20px;
+                flex-direction: column;
+            }
+        }
+    }
+}

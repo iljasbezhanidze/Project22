@@ -1,9 +1,16 @@
+// @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+//     font-size: 1.34vmin;
+// }
+
 //variables
 $light-blue: #7EC1F9;
 $dark-blue: #0D4C82;
 $grey: #fafafa;
 $black: #212121;
 $white: #fff;
+$maxWidth: 1600;
+$maxHeight: 900;
+$maxWidthContainer: 1560;
 
 $colors: (
     'light-blue' : $light-blue,
