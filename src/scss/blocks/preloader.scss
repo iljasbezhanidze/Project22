@@ -15,7 +15,11 @@
     flex-direction: column;
     z-index: 99999;
     @include adaptiv-value('padding', 60, 30, 1);
-    transition: all .5s cubic-bezier(0.9, 0.0, 0.3, 0.5);
+    transition: all .52s cubic-bezier(0.9, 0.0, 0.3, 0.5);
+
+    @include  xs() {
+        padding-bottom: 60px;
+    }
 
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         padding: get-vw(60px);
@@ -38,6 +42,6 @@
 }
 
 .b-preloader.active {
-    top: -100%;
+    top: -120%;
     bottom: 0;
 }
