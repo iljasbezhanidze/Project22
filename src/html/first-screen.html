@@ -10,8 +10,16 @@
                 data transparency</p>
         </div>
         <nav class="b-first-screen__nav">
-            <a href="" class="b-btn b-btn_light-up">book free consultation</a>
-            <a href="" class="b-btn b-btn_dark-down">Estimate Customization Cost</a>
+
+            @@if(background === 'dark') {
+                <a href="#" class="b-btn b-btn_bcg-white b-btn_c-dark-blue">book free consultation</a>
+                <a href="#" class="b-btn b-btn_down b-btn_bcg-dark-blue b-btn_c-white b-btn_bc-white">Estimate Customization Cost</a>
+            }
+
+            @@if(background === 'light') {
+                <a href="#" class="b-btn b-btn_bcg-dark-blue b-btn_c-white">book free consultation</a>
+                <a href="#" class="b-btn b-btn_down b-btn_bcg-light-blue b-btn_c-dark-blue b-btn_bc-dark-blue">Estimate Customization Cost</a>
+            }
         </nav>
     </div>
     <div class="b-graph b-first-screen__inner b-first-screen__inner_graph">

@@ -30,7 +30,12 @@
                 <a data-roll-animate="Services" href="#">Services</a>
             </li>
         </ul>
-        <a class="b-btn b-btn_light-up" href="#">book free consultation
+        @@if(background === 'dark') {
+            <a class="b-btn b-btn_c-dark-blue b-btn_bcg-white" href="#">book free consultation
+        }
+        @@if(background === 'light') {
+            <a class="b-btn b-btn_c-white b-btn_bcg-dark-blue" href="#">book free consultation
+        }
         </a>
     </nav>
 

@@ -31,11 +31,33 @@
 
 .b-main-title {}
 
-.b-first-screen__title {}
+.b-first-screen__title {
+    margin-bottom: 40px;
 
-.b-first-screen__description {}
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        margin-bottom: get-vw(40px);
+    }
+}
 
-.b-first-screen__nav {}
+.b-first-screen__description {
+    margin-bottom: 40px;
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        margin-bottom: get-vw(40px);
+    }
+}
+
+.b-first-screen__nav {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 40px;
+
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        column-gap: get-vw(30px);
+        margin-bottom: get-vw(40px);
+    }
+}
 
 .b-btn {}
 
