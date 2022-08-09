@@ -2,19 +2,20 @@
     position: relative;
     top: 0;
     will-change: top;
+    @media(min-width:790px) {
+        &:after {
+            content: attr(data-roll-animate);
+            position: absolute;
+            top: 1.2em;
+            left: 0;
+            right: 0;
+            display: block;
+        }
     
-    &:after {
-        content: attr(data-roll-animate);
-        position: absolute;
-        top: 1.2em;
-        left: 0;
-        right: 0;
-        display: block;
-    }
-
-    &:hover {
-        animation: roll-text .2s linear 1 .1s;
-    }
+        &:hover {
+            animation: roll-text .2s linear 1 .1s;
+        }
+    } 
 }
 
 @keyframes roll-text {
