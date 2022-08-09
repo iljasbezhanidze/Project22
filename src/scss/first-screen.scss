@@ -1,8 +1,22 @@
 @import "base/vars";
 @import "base/mixins";
+@import "base/breakpoints";
+
+.b-first-screen {
+    border-radius: 0 0 20px 20px;
+    z-index: 2;
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        border-radius: 0 0 get-vw(20px) get-vw(20px);
+    }
+}
 
 .b-first-screen__wrapper {
-    padding: 112px 30px 180px;
+    // padding: 112px 30px 180px;
+    @include adaptiv-value('padding-top', 112, 50, 1);
+    @include adaptiv-value('padding-right', 30, 20, 1);
+    @include adaptiv-value('padding-bottom', 180, 0, 1);
+    @include adaptiv-value('padding-left', 30, 20, 1);
 
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         padding: get-vw(112px) get-vw(30px) get-vw(180px);
@@ -50,7 +64,8 @@
 .b-first-screen__nav {
     display: flex;
     column-gap: 30px;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
+    row-gap: 20px;
 
 
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {

@@ -10,6 +10,10 @@ body {
     @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
         font-size: get-vw(16px);
     }
+
+    @include  xs() {
+        font-size: 14px;
+    }
 }
 
 .b-page {
