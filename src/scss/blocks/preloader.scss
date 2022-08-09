@@ -25,13 +25,14 @@
         padding: get-vw(60px);
     }
 
-    & img {
+    & video {
         margin-top: auto;
-        // aspect-ratio: 1/1;
+        height: 187px;
         @include adaptiv-value('width', 270, 150, 1);
-
+        
         @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
             width: get-vw(270px);
+            height: get-vw(187px);
         }
     }
 }
