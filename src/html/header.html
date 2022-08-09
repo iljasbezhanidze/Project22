@@ -34,9 +34,11 @@
         </a>
     </nav>
 
-    <button class="b-burger">
-        <span class="b-burger__line"></span>
-        <span class="b-burger__line"></span>
-        <span class="b-burger__line"></span>
-    </button>
+    @@if(burger === 'true') {
+        <button class="b-burger">
+            <span class="b-burger__line"></span>
+            <span class="b-burger__line"></span>
+            <span class="b-burger__line"></span>
+        </button>
+    }
 </header>

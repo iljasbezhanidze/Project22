@@ -1,20 +1,22 @@
 @@include('html/_head.html', {
 "title" : "Project 22"
 })
-@@include('html/preloader.html')
+<!-- @@include('html/preloader.html') -->
 
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
 			<div class="b-first-screen b-first-screen_bcg-dark-blue b-first-screen_c-white b-page__container">
 				@@include('html/header.html',{
-					background: 'dark'
+					background: 'dark',
+					burger: 'true'
 				})
 				@@include('html/first-screen.html')
 			</div>
 			<div class="b-first-screen b-first-screen_bcg-light-blue b-first-screen_c-blackb-page__container">
 				@@include('html/header.html', {
-					background: 'light'
+					background: 'light',
+					burger: 'false'
 				})
 				@@include('html/first-screen.html')
 			</div>

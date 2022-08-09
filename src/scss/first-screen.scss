@@ -1,3 +1,46 @@
+@import "base/vars";
+@import "base/mixins";
+
 .b-first-screen__wrapper {
-    
+    padding: 112px 30px 180px;
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        padding: get-vw(112px) get-vw(30px) get-vw(180px);
+    }
 }
+
+.b-first-screen__inner {}
+
+.b-first-screen__inner_text {
+    width: min(638px, 100%);
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        max-width: get-vw(638px);
+    }
+}
+
+.b-first-screen__inner_graph {
+    width: min(740px, 100%);
+
+    @media (min-width: #{$maxWidth}px) and (min-height: #{$maxHeight}px) {
+        max-width: get-vw(740px);
+    }
+}
+
+.b-main-title {}
+
+.b-first-screen__title {}
+
+.b-first-screen__description {}
+
+.b-first-screen__nav {}
+
+.b-btn {}
+
+.b-btn__light-up {}
+
+.b-btn_dark-down {}
+
+.b-graph {}
